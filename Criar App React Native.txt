@@ -1,0 +1,52 @@
+CONFIG DO GIT
+-Instala o Git no pc
+-Abre o Bash
+
+$ git config --global user.name "YOUR NAME"
+$ git config --global user.email "YOUR EMAIL ADDRESS"
+
+
+GIT TUTORIAL
+
+-Cria o repositorio no github
+-Entra na pasta no pc que quer que o projeto esteja
+-Clone com: git clone https://github.com/<username>/site.git
+
+
+COMANDOS DO GIT
+
+-git status (ver o status dos arquivos)
+-git add . (o . add todos os arquivos)
+-git commit -m "Mensagem" (faz o commit com a mensagem)
+-git push (empurra tudo pro github)
+
+
+CRIAR PROJETO NO VSCODE
+
+-No VsCode acesse a pasta raiz do projeto clonado do git. Ex: projeto esta em Doc/ExemploApp, entao acesso a Doc/
+-Crie o projeto com: react-native init ExemploApp (dê um 'y' pra sobreescrever a pasta)
+
+
+APP Tutorial
+
+-Cria Routes.js
+-Edita a App.js
+-Cria pasta src > components (ou outras)
+-Cria a Initial.js em components
+-Verifica quais dependencias e começa a programar
+
+
+
+
+LINKS UTEIS
+
+https://blog.caelum.com.br/publicando-sua-app-no-google-play/
+https://blog.swmansion.com/make-your-react-native-app-3x-smaller-44c993eda2c9
+https://facebook.github.io/react-native/docs/signed-apk-android
+https://pt.stackoverflow.com/questions/173245/alguem-sabe-me-explicar-o-processo-de-gerar-uma-apk-no-react-native
+https://blog.rocketseat.com.br/reduzindo-o-tamanho-das-builds-para-android-no-react-native/
+https://stackoverflow.com/questions/43293234/changing-the-package-name-in-a-react-native-app
+
+
+
+
