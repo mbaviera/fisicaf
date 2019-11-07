@@ -1,13 +1,13 @@
 import React from "react";
 import { Router, Scene } from "react-native-router-flux";
-import Initial from "./src/components/Initial";
+import Initial from "./src/components/principal/Main";
 
 //areas
-import Mecanica from "./src/components/model/Mecanica";
-import Termologia from "./src/components/model/Termologia";
-import Optica from "./src/components/model/Optica";
-import Ondulatoria from "./src/components/model/Ondulatoria";
-import Eletromagnetismo from "./src/components/model/Eletromagnetismo";
+import Mecanica from "./src/components/menu/Mecanica";
+import Termologia from "./src/components/menu/Termologia";
+import Optica from "./src/components/menu/Optica";
+import Ondulatoria from "./src/components/menu/Ondulatoria";
+import Eletromagnetismo from "./src/components/menu/Eletromagnetismo";
 
 //subareas
 

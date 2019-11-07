@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Alert, BackHandler, Text, Image, TouchableOpacity, ImageBackground, Dimensions } from "react-native";
+import { StyleSheet, View, BackHandler, Text, Image, TouchableOpacity, ImageBackground, Dimensions } from "react-native";
 import { Appbar } from 'react-native-paper';
 import { Actions } from "react-native-router-flux";
 import { ScrollView } from "react-native-gesture-handler";
@@ -8,7 +8,7 @@ import { AdMobBanner } from 'react-native-admob'
 
 const screen = Dimensions.get('window');
 
-export default class Initial extends Component {
+export default class Eletromagnetismo extends Component {
   //DEFINE VARIAVEIS
   constructor(props) {
     super(props);
@@ -16,61 +16,21 @@ export default class Initial extends Component {
     };
   }
 
-  componentWillMount() {
-    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
-  }
-
   componentWillUnmount() {
-    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
   }
 
-  handleBackButton = () => {
-    Alert.alert(
-      "",
-      "Deseja SAIR da aplicação?",
-      [
-        {
-          text: "Não",
-          onPress: () => console.log("Cancel Pressed"),
-          style: "cancel"
-        },
-        { text: "Sim", onPress: () => BackHandler.exitApp() }
-      ],
-      { cancelable: false }
-    );
+  handleBackButtonClick() {
+    this.props.navigation.goBack(null);
     return true;
-  };
-
-  mecanica = () => {
-    Actions.mecanica();
-  };
-
-  //tela profunda (deep) 
-  termologia = () => {
-    Actions.termologia();
-  };
-
-  //tela hotstone
-  optica = () => {
-    Actions.optica();
-  };
-
-  //tela reflex
-  ondulatoria = () => {
-    Actions.ondulatoria();
-  };
-
-  //tela aroma
-  eletromagnetismo = () => {
-    Actions.eletromagnetismo();
-  };
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <Appbar.Header style={styles.styleHead}>
           <Image
-            source={require("./img/novo.png")}
+            source={require("./imgmenu/eletromagnetismobanner.png")}
             style={{ width: "100%", height: "100%" }}
           />
         </Appbar.Header>
@@ -80,13 +40,19 @@ export default class Initial extends Component {
             onPress={this.mecanica}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./img/mecanica.jpg")}
+              source={require("./imgmenu/eletrostatica.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-                Mecânica
+              Eletrostática
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>{"\n"}Cinemática{"\n"}Gravitação Universal{"\n"}Dinâmica{"\n"}Estática{"\n"}Hidrostática</Text>
+                <Text style={[styles.text, styles.value]}>
+                {"\n"}Cargas elétricas
+                {"\n"}Eletrização
+                {"\n"}Força de interação entre cargas
+                {"\n"}Campo elétrico
+                {"\n"}Potencial elétrico
+                </Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
@@ -95,28 +61,20 @@ export default class Initial extends Component {
             onPress={this.termologia}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./img/termologia.jpg")}
+              source={require("./imgmenu/eletrodinamica.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-                Termologia
+              Eletrodinâmica
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>{"\n"}Termometria{"\n"}Calorimetria{"\n"}Termodinâmica{"\n"}Dilatação{"\n"}Entropia{"\n"}Gases</Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
-         
-          <TouchableOpacity style={styles.row}
-            onPress={this.ondulatoria}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./img/ondulatoria.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-                Ondulatória
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>{"\n"}Movimento Harmônico Simples{"\n"}Ondas{"\n"}Acústica</Text>
+                <Text style={[styles.text, styles.value]}>
+                {"\n"}Corrente Elétrica
+                {"\n"}Resistência Elétrica
+                {"\n"}Associação de Resistores
+                {"\n"}Efeito Joule
+                {"\n"}Potência Elétrica
+                {"\n"}Consumo de Energia Elétrica
+                </Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
@@ -125,44 +83,30 @@ export default class Initial extends Component {
             onPress={this.optica}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./img/optica.jpg")}
+              source={require("./imgmenu/magnetico.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-                Óptica
+              Indução Magnética
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>{"\n"}Óptica Geométrica</Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
-
-
-          <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./img/eletromagnetismo.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-                Eletromagnetismo
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>{"\n"}Eletrostática{"\n"}Eletrodinâmica{"\n"}Indução Magnética</Text>
+                <Text style={[styles.text, styles.value]}>
+                {"\n"}Lei de Faraday-Neumann 
+                {"\n"}Fluxo de Indução Magnética                  
+                {"\n"}Transformadores 
+                </Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
         </ScrollView>
 
-        <View>   
-        {/*         
-          <AdMobBanner
+        <View>
+            <AdMobBanner
             adSize="smartBannerPortrait"
             //adUnitID="ca-app-pub-7432855832022345/6069840286" //meu ads id
             adUnitID="ca-app-pub-3940256099942544/6300978111" //test ads id 
             testDevices={[AdMobBanner.simulatorId]}
             //onAdFailedToLoad={error => console.error(error)}          
-          />     
-        */}   
+          />                  
         </View>
       </View>
     );
@@ -180,7 +124,7 @@ const styles = StyleSheet.create({
   styleHead: {
     borderRadius: 0,
     borderWidth: 1,
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     backgroundColor: "#fff",
   },
   row: {
@@ -188,7 +132,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     borderWidth: 1,
     //borderColor: "#A2A2A2",
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     marginTop: "1%",
   },
   imageBackground: {
@@ -206,6 +150,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 4,
   },
   title: {
+    textAlign: "center",
     fontSize: 27,
   },
   rating: {

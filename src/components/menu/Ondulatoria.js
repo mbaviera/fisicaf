@@ -8,7 +8,7 @@ import { AdMobBanner } from 'react-native-admob'
 
 const screen = Dimensions.get('window');
 
-export default class Mecanica extends Component {
+export default class Ondulatoria extends Component {
   //DEFINE VARIAVEIS
   constructor(props) {
     super(props);
@@ -25,13 +25,12 @@ export default class Mecanica extends Component {
     return true;
   }
 
-
   render() {
     return (
       <View style={styles.container}>
         <Appbar.Header style={styles.styleHead}>
           <Image
-            //source={require("./img/termologia.jpg")}
+            source={require("./imgmenu/ondulatoriabanner.png")}
             style={{ width: "100%", height: "100%" }}
           />
         </Appbar.Header>
@@ -41,19 +40,19 @@ export default class Mecanica extends Component {
             onPress={this.mecanica}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./imgmodel/cinematica.jpg")}
+              source={require("./imgmenu/mhs.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Cinemática
+              Movimento Harmônico Simples
               </Text>
               <View style={styles.rating}>
                 <Text style={[styles.text, styles.value]}>
-                {"\n"}Velocidade
-                {"\n"}Movimento Uniforme
-                {"\n"}Movimento Uniformemente Variado
-                {"\n"}Movimento Vertical
-                {"\n"}Movimento Oblíquo
-                {"\n"}Movimento circular</Text>
+                {"\n"}Movimento Periódico e Oscilatório
+                {"\n"}Funções Horárias
+                {"\n"}Força no MHS
+                {"\n"}Oscilador Massa-mola
+                {"\n"}Pêndulo Simples
+                </Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
@@ -62,22 +61,18 @@ export default class Mecanica extends Component {
             onPress={this.termologia}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./imgmodel/dinamica.jpg")}
+              source={require("./imgmenu/ondas.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Dinâmica
+              Ondas
               </Text>
               <View style={styles.rating}>
                 <Text style={[styles.text, styles.value]}>
-                {"\n"}Leis de Newton
-                {"\n"}Força Peso
-                {"\n"}Força de Atrito
-                {"\n"}Força Elástica
-                {"\n"}Força Centrípeta
-                {"\n"}Trabalho de um força
-                {"\n"}Potência
-                {"\n"}Energia
-                {"\n"}Impulso e Quantidade de Movimento
+                {"\n"}Classificação das Ondas
+                {"\n"}Velocidade de propagação das ondas
+                {"\n"}Reflexão das ondas
+                {"\n"}Superposição de ondas
+                {"\n"}Refração das ondas
                 </Text>
               </View>
             </ImageBackground>
@@ -87,66 +82,32 @@ export default class Mecanica extends Component {
             onPress={this.optica}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./imgmodel/estatica.jpg")}
+              source={require("./imgmenu/acustica.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Estática
+              Acústica
               </Text>
               <View style={styles.rating}>
                 <Text style={[styles.text, styles.value]}>
-                {"\n"}Equilíbrio
-                {"\n"}Estática de um Ponto
-                {"\n"}Estática de um Corpo Rígido
-                </Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.row}
-            onPress={this.ondulatoria}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./imgmodel/hidrostatica.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-              Hidrostática
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Pressão
-                {"\n"}Empuxo
-                </Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./imgmodel/gravitacao.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-              Gravitação Universal
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Força Gravitacional
-                {"\n"}Leis de Kepler
+                {"\n"}Velocidade de Propagação do Som em Meios Gasosos
+                {"\n"}Intervalo Acústico    
+                {"\n"}Intensidade Sonora              
+                {"\n"}Tubos Sonoros
+                {"\n"}Efeito Doppler
                 </Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
         </ScrollView>
 
-        <View>          
-          <AdMobBanner
+        <View>
+            <AdMobBanner
             adSize="smartBannerPortrait"
             //adUnitID="ca-app-pub-7432855832022345/6069840286" //meu ads id
             adUnitID="ca-app-pub-3940256099942544/6300978111" //test ads id 
             testDevices={[AdMobBanner.simulatorId]}
             //onAdFailedToLoad={error => console.error(error)}          
-          />        
+          />                  
         </View>
       </View>
     );
@@ -164,7 +125,7 @@ const styles = StyleSheet.create({
   styleHead: {
     borderRadius: 0,
     borderWidth: 1,
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     backgroundColor: "#fff",
   },
   row: {
@@ -172,7 +133,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     borderWidth: 1,
     //borderColor: "#A2A2A2",
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     marginTop: "1%",
   },
   imageBackground: {
@@ -190,6 +151,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 4,
   },
   title: {
+    textAlign: "center",
     fontSize: 27,
   },
   rating: {

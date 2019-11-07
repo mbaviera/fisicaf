@@ -36,6 +36,14 @@ APP Tutorial
 -Verifica quais dependencias e começa a programar
 
 
+ADMOB TUTORIAL
+
+-Criar o app na pagina do admob.
+-Copiar o id do app admob e colocar no manifest do app dentro do <meta-data> (copiar do massagem)
+-Criar a campanha no admob.
+-Copiar o id da campanha e colocar no app, dentro da tag do <AdMobBanner> (Copiar do massagem)
+
+
 
 
 LINKS UTEIS

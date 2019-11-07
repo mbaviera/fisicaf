@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, BackHandler, Text, Image, TouchableOpacity, ImageBackground, Dimensions } from "react-native";
+import { StyleSheet, View, Alert, BackHandler, Text, Image, TouchableOpacity, ImageBackground, Dimensions } from "react-native";
 import { Appbar } from 'react-native-paper';
 import { Actions } from "react-native-router-flux";
 import { ScrollView } from "react-native-gesture-handler";
@@ -8,7 +8,7 @@ import { AdMobBanner } from 'react-native-admob'
 
 const screen = Dimensions.get('window');
 
-export default class Termologia extends Component {
+export default class Main extends Component {
   //DEFINE VARIAVEIS
   constructor(props) {
     super(props);
@@ -16,21 +16,61 @@ export default class Termologia extends Component {
     };
   }
 
-  componentWillUnmount() {
-    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+  componentWillMount() {
+    BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
   }
 
-  handleBackButtonClick() {
-    this.props.navigation.goBack(null);
-    return true;
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
   }
+
+  handleBackButton = () => {
+    Alert.alert(
+      "",
+      "Deseja SAIR da aplicação?",
+      [
+        {
+          text: "Não",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel"
+        },
+        { text: "Sim", onPress: () => BackHandler.exitApp() }
+      ],
+      { cancelable: false }
+    );
+    return true;
+  };
+
+  mecanica = () => {
+    Actions.mecanica();
+  };
+
+  //tela profunda (deep) 
+  termologia = () => {
+    Actions.termologia();
+  };
+
+  //tela hotstone
+  optica = () => {
+    Actions.optica();
+  };
+
+  //tela reflex
+  ondulatoria = () => {
+    Actions.ondulatoria();
+  };
+
+  //tela aroma
+  eletromagnetismo = () => {
+    Actions.eletromagnetismo();
+  };
 
   render() {
     return (
       <View style={styles.container}>
         <Appbar.Header style={styles.styleHead}>
           <Image
-            //source={require("./img/termologia.jpg")}
+            source={require("./img/novo.png")}
             style={{ width: "100%", height: "100%" }}
           />
         </Appbar.Header>
@@ -40,15 +80,13 @@ export default class Termologia extends Component {
             onPress={this.mecanica}
             activeOpacity={0.7} >
             <ImageBackground
-              source={require("./imgmodel/termometria.jpg")}
+              source={require("./img/mecanica.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Termometria
+                Mecânica
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Escalas Termométricas
-                {"\n"}Conversões Entre Escalas</Text>
+                <Text style={[styles.text, styles.value]}>{"\n"}Cinemática{"\n"}Gravitação Universal{"\n"}Dinâmica{"\n"}Estática{"\n"}Hidrostática</Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
@@ -57,17 +95,28 @@ export default class Termologia extends Component {
             onPress={this.termologia}
             activeOpacity={0.7} >
             <ImageBackground
-              //source={require("./imgmodel/dinamica.jpg")}
+              source={require("./img/termologia.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Calorimetria
+                Termologia
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Calor
-                {"\n"}Troca de calor
-                {"\n"}Propagação de calor
-                </Text>
+                <Text style={[styles.text, styles.value]}>{"\n"}Termometria{"\n"}Calorimetria{"\n"}Termodinâmica{"\n"}Dilatação{"\n"}Entropia{"\n"}Gases</Text>
+              </View>
+            </ImageBackground>
+          </TouchableOpacity>
+         
+          <TouchableOpacity style={styles.row}
+            onPress={this.ondulatoria}
+            activeOpacity={0.7} >
+            <ImageBackground
+              source={require("./img/ondulatoria.jpg")}
+              style={styles.imageBackground}>
+              <Text style={[styles.text, styles.title]}>
+                Ondulatória
+              </Text>
+              <View style={styles.rating}>
+                <Text style={[styles.text, styles.value]}>{"\n"}Movimento Harmônico Simples{"\n"}Ondas{"\n"}Acústica</Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
@@ -76,86 +125,42 @@ export default class Termologia extends Component {
             onPress={this.optica}
             activeOpacity={0.7} >
             <ImageBackground
-              //source={require("./imgmodel/estatica.jpg")}
+              source={require("./img/optica.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Termodinâmica
+                Óptica
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Leis da Termodinâmica
-                {"\n"}Energia Interna
-                {"\n"}Trabalho de um Gás                
-                {"\n"}Máquinas Térmicas
-                {"\n"}Ciclo de Carnot
-                </Text>
+                <Text style={[styles.text, styles.value]}>{"\n"}Óptica Geométrica</Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.row}
-            onPress={this.ondulatoria}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./imgmodel/dilatacao.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-              Dilatação
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Dilatação dos Sólidos
-                {"\n"}Dilatação dos Líquidos
-                </Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
             onPress={this.eletromagnetismo}
             activeOpacity={0.7} >
             <ImageBackground
-              //source={require("./imgmodel/gravitacao.jpg")}
+              source={require("./img/eletromagnetismo.jpg")}
               style={styles.imageBackground}>
               <Text style={[styles.text, styles.title]}>
-              Entropia
+                Eletromagnetismo
               </Text>
               <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Entropia 
-                </Text>
-              </View>
-            </ImageBackground>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
-            activeOpacity={0.7} >
-            <ImageBackground
-              source={require("./imgmodel/gases.jpg")}
-              style={styles.imageBackground}>
-              <Text style={[styles.text, styles.title]}>
-              Gases
-              </Text>
-              <View style={styles.rating}>
-                <Text style={[styles.text, styles.value]}>
-                {"\n"}Lei Geral dos Gases Perfeitos
-                {"\n"}Transformações
-                {"\n"}Equação de Clapeyron                
-                </Text>
+                <Text style={[styles.text, styles.value]}>{"\n"}Eletrostática{"\n"}Eletrodinâmica{"\n"}Indução Magnética</Text>
               </View>
             </ImageBackground>
           </TouchableOpacity>
         </ScrollView>
 
-        <View>
-            <AdMobBanner
+        <View> 
+          <AdMobBanner
             adSize="smartBannerPortrait"
-            //adUnitID="ca-app-pub-7432855832022345/6069840286" //meu ads id
+            //adUnitID="ca-app-pub-7432855832022345/1042187961" //meu ads id
             adUnitID="ca-app-pub-3940256099942544/6300978111" //test ads id 
             testDevices={[AdMobBanner.simulatorId]}
             //onAdFailedToLoad={error => console.error(error)}          
-          />                  
+          />   
         </View>
       </View>
     );
@@ -173,7 +178,7 @@ const styles = StyleSheet.create({
   styleHead: {
     borderRadius: 0,
     borderWidth: 1,
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     backgroundColor: "#fff",
   },
   row: {
@@ -181,7 +186,7 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     borderWidth: 1,
     //borderColor: "#A2A2A2",
-    borderColor: "#29BDC1",
+    borderColor: "#5BBA47",
     marginTop: "1%",
   },
   imageBackground: {

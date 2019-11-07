@@ -24,7 +24,7 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-         <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7432855832022345~2977361443"/>
+      <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7432855832022345~2466950276"/>
     </application>
 
 </manifest>
