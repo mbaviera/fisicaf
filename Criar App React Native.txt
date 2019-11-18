@@ -24,7 +24,7 @@ COMANDOS DO GIT
 CRIAR PROJETO NO VSCODE
 
 -No VsCode acesse a pasta raiz do projeto clonado do git. Ex: projeto esta em Doc/ExemploApp, entao acesso a Doc/
--Crie o projeto com: react-native init ExemploApp (dê um 'y' pra sobreescrever a pasta)
+-Crie o projeto com: react-native init ExemploApp (dÃª um 'y' pra sobreescrever a pasta)
 
 
 APP Tutorial
@@ -33,7 +33,7 @@ APP Tutorial
 -Edita a App.js
 -Cria pasta src > components (ou outras)
 -Cria a Initial.js em components
--Verifica quais dependencias e começa a programar
+-Verifica quais dependencias e comeÃ§a a programar
 
 
 ADMOB TUTORIAL
@@ -43,6 +43,8 @@ ADMOB TUTORIAL
 -Criar a campanha no admob.
 -Copiar o id da campanha e colocar no app, dentro da tag do <AdMobBanner> (Copiar do massagem)
 
+GERAR O APK 
+-Seguir algum tutorial de gerar apk, primeiro tem que gerar o keystore e SALVAR ELE PRA QUANDO PRECISAR ATUALIZAR.
 
 
 
