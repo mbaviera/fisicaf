@@ -25,6 +25,10 @@ export default class Mecanica extends Component {
     return true;
   }
 
+  cinematica = () => {
+    Actions.cinematica();
+  };
+
 
   render() {
     return (
@@ -38,7 +42,7 @@ export default class Mecanica extends Component {
 
         <ScrollView style={{ marginLeft: "1%", marginTop:"2%", marginBottom:"2%" }}>
           <TouchableOpacity style={styles.row}
-            onPress={this.mecanica}
+            onPress={this.cinematica}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/cinematica.jpg")}

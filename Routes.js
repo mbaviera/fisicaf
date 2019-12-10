@@ -9,8 +9,8 @@ import Optica from "./src/components/menu/Optica";
 import Ondulatoria from "./src/components/menu/Ondulatoria";
 import Eletromagnetismo from "./src/components/menu/Eletromagnetismo";
 
-//subareas
-
+//subareas (Mecanica)
+import Cinematica from "./src/components/submenu/mecanica/Cinematica";
 
 const Routes = () => (
   <Router>
@@ -51,7 +51,13 @@ const Routes = () => (
         key="eletromagnetismo"
         component={Eletromagnetismo}
         title="Elet"
-      />   
+      /> 
+      <Scene
+        hideNavBar={true}
+        key="cinematica"
+        component={Cinematica}
+        title="Cine"
+      />  
     </Scene>
   </Router>
 );
