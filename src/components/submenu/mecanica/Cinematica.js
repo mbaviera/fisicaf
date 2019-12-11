@@ -115,10 +115,119 @@ export default class Cinematica extends Component {
             <Text style={styles.styleLegendaFormulas}>v = Velocidade</Text>
             <Text style={styles.styleLegendaFormulas}>vo = Velocidade Inicial</Text>
             <Text style={styles.styleLegendaFormulas}>g = Gravidade</Text>
-            <Text style={styles.styleLegendaFormulas}>Δh = Variação de Altura</Text>
+            <Text style={styles.styleLegendaFormulas}>Δh = Variação de Altura</Text>          
           </View>
 
-          
+          <Text style={styles.styleTextHead}> Movimento Oblíquo </Text>
+          <View style={styles.styleViewFormulas}>
+          <Text style={styles.styleHeadFormulas}>Função Horária da Posição Horizontal:</Text>
+          <Text style={styles.styleHeadFormulas}>x = xo + vox.t </Text>
+            <Text style={styles.styleLegendaFormulas}>x = Posição Horizontal</Text>
+            <Text style={styles.styleLegendaFormulas}>xo = Posição Horizontal Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>vox = Componente Horizontal do Vetor Vel. Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Componente Horizontal da Velocidade Inicial:</Text>
+            <Text style={styles.styleHeadFormulas}>vox = |vo|.cosθ </Text>
+            <Text style={styles.styleLegendaFormulas}>vox = Componente Horizontal do Vetor Vel. Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>|vo| = Módulo de Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>vo = Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>θ = Ângulo Entre x e o Lançamento</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Função Horária da Posição Vertical:</Text>
+            <Text style={styles.styleHeadFormulas}>y = yo + voy.t + 1/2.g.t²</Text>
+            <Text style={styles.styleLegendaFormulas}>y = Posição Vertical</Text>
+            <Text style={styles.styleLegendaFormulas}>yo = Posição Vertical Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>voy = Componente Vertical do Vetor de Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text style={styles.styleLegendaFormulas}>g = Gravidade</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Componente Vertical da Velocidade Inicial:</Text>
+            <Text style={styles.styleHeadFormulas}>voy = |vo|.senθ </Text>
+            <Text style={styles.styleLegendaFormulas}>voy = Componente Vertical do Vetor Vel. Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>|vo| = Módulo de Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>vo = Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>θ = Ângulo Entre x e o Lançamento</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Componente Vertical da Velocidade Inicial:</Text>
+            <Text style={styles.styleHeadFormulas}>voy = |vo|.senθ </Text>
+            <Text style={styles.styleLegendaFormulas}>voy = Componente Vertical do Vetor Vel. Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>|vo| = Módulo de Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>vo = Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>θ = Ângulo Entre x e o Lançamento</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Alcance Máximo do Projétil Horizontalmente:</Text>
+            <Text style={styles.styleHeadFormulas}>R = |vo|².sen(2θ) / g </Text>
+            <Text style={styles.styleLegendaFormulas}>R = Alcance Máximo Horizontal</Text>
+            <Text style={styles.styleLegendaFormulas}>|vo| = Módulo de Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>vo = Velocidade Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>θ = Ângulo Entre x e o Lançamento</Text>
+            <Text style={styles.styleLegendaFormulas}>g = Gravidade</Text>
+          </View>
+
+          <Text style={styles.styleTextHead}> Movimento Circular </Text>
+          <View style={styles.styleViewFormulas}>
+          <Text style={styles.styleHeadFormulas}>Posição Angular:</Text>
+          <Text style={styles.styleHeadFormulas}>φ = S / r </Text>
+            <Text style={styles.styleLegendaFormulas}>φ = Ângulo Descrito</Text>
+            <Text style={styles.styleLegendaFormulas}>S = Arco de Círculo Descrito</Text>
+            <Text style={styles.styleLegendaFormulas}>r = Raio de Círculo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Deslocamento Angular:</Text>
+            <Text style={styles.styleHeadFormulas}>Δφ = ΔS / r </Text>
+            <Text style={styles.styleLegendaFormulas}>Δφ = Deslocamento Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>ΔS = Variação da Posição no Arco</Text>
+            <Text style={styles.styleLegendaFormulas}>r = Raio de Círculo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Velocidade Angular:</Text>
+            <Text style={styles.styleHeadFormulas}>ω = Δφ / t</Text>
+            <Text style={styles.styleLegendaFormulas}>ω = Velocidade Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>Δφ = Deslocamento Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Aceleração Angular:</Text>
+            <Text style={styles.styleHeadFormulas}>α = Δω / t </Text>
+            <Text style={styles.styleLegendaFormulas}>α = Aceleração Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>Δω = Variação da Velocidade Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Função Horária da Posição Angular no Mov. Circular Unif:</Text>
+            <Text style={styles.styleHeadFormulas}>φ = φo + ω.t </Text>
+            <Text style={styles.styleLegendaFormulas}>φ = Ângulo Descrito</Text>
+            <Text style={styles.styleLegendaFormulas}>φo = Ângulo Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>ω = Velocidade Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Função Horária da Velocidade Angular:</Text>
+            <Text style={styles.styleHeadFormulas}>ω = ωo + α.t </Text>
+            <Text style={styles.styleLegendaFormulas}>ω = Velocidade Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>ωo = Velocidade Angular Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>α = Aceleração Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Função Horária da Posição Angular:</Text>
+            <Text style={styles.styleHeadFormulas}>φ = φo + ωo.t + 1/2.α.t² </Text>
+            <Text style={styles.styleLegendaFormulas}>φ = Ângulo Descrito</Text>
+            <Text style={styles.styleLegendaFormulas}>φo = Ângulo Inicial </Text>
+            <Text style={styles.styleLegendaFormulas}>ωo = Velocidade Angular Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>t = Tempo</Text>
+            <Text style={styles.styleLegendaFormulas}>α = Aceleração Angular</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Equação de Torricelli para Movimento Circular:</Text>
+            <Text style={styles.styleHeadFormulas}>ω² = ωo² + 2.α.Δφ </Text>
+            <Text style={styles.styleLegendaFormulas}>ω = Velocidade Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>ωo = Velocidade Angular Inicial</Text>
+            <Text style={styles.styleLegendaFormulas}>α = Aceleração Angular</Text>
+            <Text style={styles.styleLegendaFormulas}>Δφ = Deslocamento Angular</Text>
+            <Text> </Text>
+            <Text style={styles.styleHeadFormulas}>Aceleração Centrípeta:</Text>
+            <Text style={styles.styleHeadFormulas}>acp = v² / r = ω².r</Text>
+            <Text style={styles.styleLegendaFormulas}>acp = Aceleração Centrípeta</Text>
+            <Text style={styles.styleLegendaFormulas}>v = Velocidade</Text>
+            <Text style={styles.styleLegendaFormulas}>r = Raio do Círculo</Text>
+            <Text style={styles.styleLegendaFormulas}>ω = Velocidade Angular</Text>
+          </View>
+          <Text> </Text>
         </ScrollView>
 
         <View> 
