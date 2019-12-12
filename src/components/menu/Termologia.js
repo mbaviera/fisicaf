@@ -25,6 +25,14 @@ export default class Termologia extends Component {
     return true;
   }
 
+  termometria = () => {
+    Actions.termometria();
+  };
+
+  calorimetria = () => {
+    Actions.calorimetria();
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -37,7 +45,7 @@ export default class Termologia extends Component {
 
         <ScrollView style={{ marginLeft: "1%", marginTop:"2%", marginBottom:"2%" }}>
           <TouchableOpacity style={styles.row}
-            onPress={this.mecanica}
+            onPress={this.termometria}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/termometria.jpg")}
@@ -54,7 +62,7 @@ export default class Termologia extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.termologia}
+            onPress={this.calorimetria}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/calorimetria.jpg")}
