@@ -21,7 +21,7 @@ export default class Cinematica extends Component {
   }
 
   componentWillUnmount() {
-    BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    BackHandler.removeEventListener('hardwareBackPress', this.mecanica);
   }
 
   handleBackButton = () => {   

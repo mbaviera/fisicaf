@@ -11,6 +11,7 @@ import Eletromagnetismo from "./src/components/menu/Eletromagnetismo";
 
 //subareas (Mecanica)
 import Cinematica from "./src/components/submenu/mecanica/Cinematica";
+import Dinamica from "./src/components/submenu/mecanica/Dinamica";
 
 const Routes = () => (
   <Router>
@@ -58,6 +59,12 @@ const Routes = () => (
         component={Cinematica}
         title="Cine"
       />  
+      <Scene
+        hideNavBar={true}
+        key="dinamica"
+        component={Dinamica}
+        title="Dina"
+      /> 
     </Scene>
   </Router>
 );

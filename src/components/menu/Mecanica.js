@@ -29,6 +29,9 @@ export default class Mecanica extends Component {
     Actions.cinematica();
   };
 
+  dinamica = () => {
+    Actions.dinamica();
+  };
 
   render() {
     return (
@@ -63,7 +66,7 @@ export default class Mecanica extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.termologia}
+            onPress={this.dinamica}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/dinamica.jpg")}
