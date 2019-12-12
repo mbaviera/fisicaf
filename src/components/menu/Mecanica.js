@@ -33,6 +33,18 @@ export default class Mecanica extends Component {
     Actions.dinamica();
   };
 
+  estatica = () => {
+    Actions.estatica();
+  };
+
+  hidrostatica = () => {
+    Actions.hidrostatica();
+  };
+
+  gravitacao = () => {
+    Actions.gravitacao();
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -91,7 +103,7 @@ export default class Mecanica extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.optica}
+            onPress={this.estatica}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/estatica.jpg")}
@@ -110,7 +122,7 @@ export default class Mecanica extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.ondulatoria}
+            onPress={this.hidrostatica}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/hidrostatica.jpg")}
@@ -128,7 +140,7 @@ export default class Mecanica extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
+            onPress={this.gravitacao}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/gravitacao.jpg")}

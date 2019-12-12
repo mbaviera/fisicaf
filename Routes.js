@@ -12,6 +12,9 @@ import Eletromagnetismo from "./src/components/menu/Eletromagnetismo";
 //subareas (Mecanica)
 import Cinematica from "./src/components/submenu/mecanica/Cinematica";
 import Dinamica from "./src/components/submenu/mecanica/Dinamica";
+import Estatica from "./src/components/submenu/mecanica/Estatica";
+import Hidrostatica from "./src/components/submenu/mecanica/Hidrostatica";
+import Gravitacao from "./src/components/submenu/mecanica/Gravitacao";
 
 const Routes = () => (
   <Router>
@@ -64,7 +67,25 @@ const Routes = () => (
         key="dinamica"
         component={Dinamica}
         title="Dina"
+      />
+      <Scene
+        hideNavBar={true}
+        key="estatica"
+        component={Estatica}
+        title="Esta"
+      />  
+      <Scene
+        hideNavBar={true}
+        key="hidrostatica"
+        component={Hidrostatica}
+        title="Hidro"
       /> 
+      <Scene
+        hideNavBar={true}
+        key="gravitacao"
+        component={Gravitacao}
+        title="Grav"
+      />
     </Scene>
   </Router>
 );
