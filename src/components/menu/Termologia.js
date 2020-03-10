@@ -33,6 +33,10 @@ export default class Termologia extends Component {
     Actions.calorimetria();
   };
 
+  termodinamica = () => {
+    Actions.termodinamica();
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -81,7 +85,7 @@ export default class Termologia extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.optica}
+            onPress={this.termodinamica}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/termodinamica.jpg")}
