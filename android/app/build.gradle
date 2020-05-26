@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.fisicaf"
+        applicationId "br.com.asty.fisicaf"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

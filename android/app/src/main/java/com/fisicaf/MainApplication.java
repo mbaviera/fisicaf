@@ -1,4 +1,4 @@
-package com.fisicaf;
+package br.com.asty.fisicaf;
 
 import android.app.Application;
 import android.content.Context;

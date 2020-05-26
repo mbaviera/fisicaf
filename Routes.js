@@ -20,6 +20,8 @@ import Gravitacao from "./src/components/submenu/mecanica/Gravitacao";
 import Termometria from "./src/components/submenu/termologia/Termometria";
 import Calorimetria from "./src/components/submenu/termologia/Calorimetria";
 import Termodinamica from "./src/components/submenu/termologia/Termodinamica";
+import Dilatacao from "./src/components/submenu/termologia/Dilatacao";
+import Entropia from "./src/components/submenu/termologia/Entropia";
 
 const Routes = () => (
   <Router>
@@ -108,6 +110,18 @@ const Routes = () => (
         key="termodinamica"
         component={Termodinamica}
         title="Termo"
+      />
+      <Scene
+        hideNavBar={true}
+        key="dilatacao"
+        component={Dilatacao}
+        title="Dilat"
+      />
+      <Scene
+        hideNavBar={true}
+        key="entropia"
+        component={Entropia}
+        title="Entrop"
       />
     </Scene>
   </Router>

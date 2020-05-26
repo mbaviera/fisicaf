@@ -1,4 +1,4 @@
-package com.fisicaf;
+package br.com.asty.fisicaf;
 
 import com.facebook.react.ReactActivity;
 

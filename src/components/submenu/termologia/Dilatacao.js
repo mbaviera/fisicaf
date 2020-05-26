@@ -59,7 +59,7 @@ export default class Dilatacao extends Component {
             <Text style={styles.styleLegendaFormulas}>β = Coeficiente de dilatação superficial (ºC-1)</Text>
             <Text style={styles.styleLegendaFormulas}>Δθ = Variação de temperatura (ºC)</Text>
             <Text> </Text>
-            <Text style={styles.styleHeadFormulas}>Coeficiente de dilatação superficial</Text>            
+            <Text style={styles.styleHeadFormulas}>Coeficiente de Dilatação Superficial</Text>            
             <Text style={styles.styleHeadFormulas}>β = 2 . α </Text> 
             <Text style={styles.styleLegendaFormulas}>β = Coeficiente de dilatação superficial (ºC-1)</Text>  
             <Text style={styles.styleLegendaFormulas}>α = Coeficiente de dilatação linear (ºC-1)</Text> 
@@ -71,99 +71,40 @@ export default class Dilatacao extends Component {
             <Text style={styles.styleLegendaFormulas}>γ = Coeficiente de dilatação volumétrica (ºC-1)</Text>  
             <Text style={styles.styleLegendaFormulas}>Δθ = Variação de temperatura (ºC)</Text> 
             <Text> </Text>
-            <Text style={styles.styleHeadFormulas}>Coeficiente de dilatação volumétrica</Text>            
+            <Text style={styles.styleHeadFormulas}>Coeficiente de Dilatação Volumétrica</Text>            
             <Text style={styles.styleHeadFormulas}>γ = 3 . α </Text> 
             <Text style={styles.styleLegendaFormulas}>γ = Coeficiente de dilatação volumétrica (ºC-1)</Text>  
             <Text style={styles.styleLegendaFormulas}>α = Coeficiente de dilatação linear (ºC-1)</Text> 
         </View>   
 
-          <Text style={styles.styleTextHead}> Dilatação dos líquidos </Text>
+          <Text style={styles.styleTextHead}> Dilatação Dos Líquidos </Text>
           <View style={styles.styleViewFormulas}>
-            <Text style={styles.styleHeadFormulas}>Dilatação aparente</Text>
-            <Text style={styles.styleHeadFormulas}>U = (3/2).n.R.T</Text>  
-            <Text style={styles.styleLegendaFormulas}>U = Energia Interna</Text>  
-            <Text style={styles.styleLegendaFormulas}>n = Nº de Mols do Gás</Text>   
-            <Text style={styles.styleLegendaFormulas}>R = Constante Univ. Dos Gases</Text>  
-            <Text style={styles.styleLegendaFormulas}>T = Temperatura Absoluta</Text>  
+            <Text style={styles.styleHeadFormulas}>Dilatação Aparente</Text>
+            <Text style={styles.styleHeadFormulas}>ΔVap = V0.γ1.Δθ</Text>  
+            <Text style={styles.styleLegendaFormulas}>ΔVap = Variação Apararente de Volume</Text>  
+            <Text style={styles.styleLegendaFormulas}>V0 = Volume Inicial</Text>   
+            <Text style={styles.styleLegendaFormulas}>γ1 = Coef. de Dilatação Volumétrico</Text>  
+            <Text style={styles.styleLegendaFormulas}>Δθ = Variação de Temperatura</Text>  
             <Text> </Text>  
-            <Text style={styles.styleHeadFormulas}>U = (3/2).p.V</Text>  
-            <Text style={styles.styleLegendaFormulas}>U = Energia Interna</Text>  
-            <Text style={styles.styleLegendaFormulas}>p = Pressão</Text>   
-            <Text style={styles.styleLegendaFormulas}>V = Volume</Text>   
+            <Text style={styles.styleHeadFormulas}>Dilatação do Recipiente</Text>
+            <Text style={styles.styleHeadFormulas}>ΔVrec = V0.γrec.Δθ</Text>  
+            <Text style={styles.styleLegendaFormulas}>ΔVrec = Variação de Volume do Recipiente</Text>  
+            <Text style={styles.styleLegendaFormulas}>V0 = Volume Inicial</Text>   
+            <Text style={styles.styleLegendaFormulas}>γrec = Coef. de Dilatação do Recipiente</Text>  
+            <Text style={styles.styleLegendaFormulas}>Δθ = Variação de Temperatura</Text>     
             <Text> </Text>  
-            <Text style={styles.styleHeadFormulas}>Variação da Energia Interna</Text>
-            <Text style={styles.styleHeadFormulas}>ΔU = (3/2).n.R.Δt</Text>  
-            <Text style={styles.styleLegendaFormulas}>U = Energia Interna</Text>  
-            <Text style={styles.styleLegendaFormulas}>n = Nº de Mols do Gás</Text>   
-            <Text style={styles.styleLegendaFormulas}>R = Constante Univ. Dos Gases</Text>  
-            <Text style={styles.styleLegendaFormulas}>ΔT = Variação da Temperatura Absoluta</Text>                                 
-          </View> 
-
-          <Text style={styles.styleTextHead}> Trabalho de Um Gás</Text>
-          <View style={styles.styleViewFormulas}>
-            <Text style={styles.styleHeadFormulas}>Trabalho de Um Gás:</Text>
-            <Text style={styles.styleHeadFormulas}>t =(v1 ∫ v2).p.Δv </Text>
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text>   
-            <Text style={styles.styleLegendaFormulas}>p = Pressão</Text> 
-            <Text> </Text>       
-            <Text style={styles.styleHeadFormulas}>Trabalho de Um Gás Sob Pressão Constante:</Text>
-            <Text style={styles.styleHeadFormulas}>t = p.Δv </Text>
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text>   
-            <Text style={styles.styleLegendaFormulas}>p = Pressão</Text> 
-            <Text style={styles.styleLegendaFormulas}>Δv = Variação de Volume</Text>                                            
-            <Text> </Text> 
-            <Text style={styles.styleHeadFormulas}>Trabalho de Um Gás Sob Temperatura Constante:</Text>
-            <Text style={styles.styleHeadFormulas}>t = n.R.T.ln(v2/v1) </Text>
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text>  
-            <Text style={styles.styleLegendaFormulas}>n = Nº de Mols do Gás</Text>   
-            <Text style={styles.styleLegendaFormulas}>R = Constante Univ. Dos Gases</Text>  
-            <Text style={styles.styleLegendaFormulas}>T = Temperatura Absoluta</Text>    
-            <Text style={styles.styleLegendaFormulas}>v1 = Volume Inicial</Text>  
-            <Text style={styles.styleLegendaFormulas}>v2 = Volume Final</Text>                                        
-            <Text> </Text> 
-            <Text style={styles.styleHeadFormulas}>Trabalho de Um Gás Sob Volume Constante:</Text>
-            <Text style={styles.styleHeadFormulas}>t = 0 </Text>
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text> 
-            <Text> </Text> 
-            <Text style={styles.styleHeadFormulas}>Trabalho de Um Gás Em Uma Situação Adiabática:</Text>
-            <Text style={styles.styleHeadFormulas}>|t| = |ΔU| </Text>
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text>  
-            <Text style={styles.styleLegendaFormulas}>ΔU = Variação de Energia Interna</Text>          
-          </View>    
-
-          <Text style={styles.styleTextHead}> Máquinas Térmicas </Text>
-          <View style={styles.styleViewFormulas}>
-            <Text style={styles.styleHeadFormulas}>Trabalho Em Máquinas Térmicas</Text>
-            <Text style={styles.styleHeadFormulas}>|t| = |Qa| - |Qr|</Text>  
-            <Text style={styles.styleLegendaFormulas}>t = Trabalho</Text>  
-            <Text style={styles.styleLegendaFormulas}>Qa = Calor na Fonte de Aquecimento</Text>   
-            <Text style={styles.styleLegendaFormulas}>Qr = Calor na Fonte de Resfriamento</Text>   
+            <Text style={styles.styleHeadFormulas}>Dilatação Real</Text>
+            <Text style={styles.styleHeadFormulas}>ΔVreal = ΔVap + ΔVrec</Text>  
+            <Text style={styles.styleLegendaFormulas}>ΔVreal = Variação Real de Volume</Text>  
+            <Text style={styles.styleLegendaFormulas}>ΔVap = Variação Aparente de Volume</Text>   
+            <Text style={styles.styleLegendaFormulas}>ΔVrec = Variação de Volume do Recipiente</Text>  
             <Text> </Text>  
-            <Text style={styles.styleHeadFormulas}>Rendimento de Uma Máquina Térmica</Text>
-            <Text style={styles.styleHeadFormulas}>n = ( t / |Qa| ) </Text> 
-            <Text style={styles.styleHeadFormulas}>n = ( |Qa| - |Qr| ) / |Qa|  </Text>  
-            <Text style={styles.styleHeadFormulas}>n = 1 - ( |Qr| / |Qa| )  </Text>  
-            <Text style={styles.styleLegendaFormulas}>n = Energia Interna</Text>  
-            <Text style={styles.styleLegendaFormulas}>t = Nº de Mols do Gás</Text>   
-            <Text style={styles.styleLegendaFormulas}>Qa = Calor na Fonte de Aquecimento</Text>  
-            <Text style={styles.styleLegendaFormulas}>Qr = Calor na Fonte de Resfriamento</Text>                                 
-          </View>
-
-          <Text style={styles.styleTextHead}> Ciclo de Carnot </Text>
-          <View style={styles.styleViewFormulas}>
-            <Text style={styles.styleHeadFormulas}>Trabalho no Ciclo de Carnot</Text>
-            <Text style={styles.styleHeadFormulas}>tcarnot = Qa</Text>  
-            <Text style={styles.styleLegendaFormulas}>tcarnot = Trabalho da Máquina de Carnot</Text>  
-            <Text style={styles.styleLegendaFormulas}>Qa = Calor na Fonte de Aquecimento</Text>   
-            <Text> </Text>  
-            <Text style={styles.styleHeadFormulas}>Redimento da Máquina de Carnot</Text>
-            <Text style={styles.styleHeadFormulas}>ncarnot = 1 - (|Qr| / |Qa|) = 1 - (Tr / Ta)</Text>  
-            <Text style={styles.styleLegendaFormulas}>ncarnot = Rendimento</Text>    
-            <Text style={styles.styleLegendaFormulas}>Qa = Calor na Fonte de Aquecimento</Text>  
-            <Text style={styles.styleLegendaFormulas}>Qr = Calor na Fonte de Resfriamento</Text>  
-            <Text style={styles.styleLegendaFormulas}>Ta = Temperatura na Fonte de Aquecimento</Text>  
-            <Text style={styles.styleLegendaFormulas}>Tr = Temperatura na Fonte de Resfriamento</Text>                              
-          </View>
+            <Text style={styles.styleHeadFormulas}>Coef. Dilatação Real</Text>
+            <Text style={styles.styleHeadFormulas}>γreal = γ1 + γrec</Text>  
+            <Text style={styles.styleLegendaFormulas}>γreal = Coef. Dilatação Vol. Real</Text>  
+            <Text style={styles.styleLegendaFormulas}>γ1 = Coef. Dilatação Vol. do Líquido</Text>   
+            <Text style={styles.styleLegendaFormulas}>γrec = Coef. Dilatação Vol. do Recipiente</Text>                                 
+          </View>           
           <Text> </Text>
         </ScrollView>
 

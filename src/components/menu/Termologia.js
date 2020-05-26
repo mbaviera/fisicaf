@@ -37,6 +37,18 @@ export default class Termologia extends Component {
     Actions.termodinamica();
   };
 
+  dilatacao = () => {
+    Actions.dilatacao();
+  };
+
+  entropia = () => {
+    Actions.entropia();
+  };
+
+  gases = () => {
+    Actions.gases();
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -106,7 +118,7 @@ export default class Termologia extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.ondulatoria}
+            onPress={this.dilatacao}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/dilatacao.jpg")}
@@ -124,7 +136,7 @@ export default class Termologia extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
+            onPress={this.entropia}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/entropia.jpg")}
@@ -141,7 +153,7 @@ export default class Termologia extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.row}
-            onPress={this.eletromagnetismo}
+            onPress={this.gases}
             activeOpacity={0.7} >
             <ImageBackground
               source={require("./imgmenu/gases.jpg")}
