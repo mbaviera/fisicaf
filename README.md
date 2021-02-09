@@ -1,8 +1,3 @@
-# fisicaf
-Mobile hybrid app containing a complete list of physics formulas.
-
--Eletromagnetismo
--Mecanica
--Ondulatoria
--Optica
--Termologia 
+<h1>Physics Formules App</h1>
+A simple physics formulas app built using React Native
+In Progress...
